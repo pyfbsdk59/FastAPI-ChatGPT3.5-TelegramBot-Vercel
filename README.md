@@ -88,4 +88,6 @@ https://ithelp.ithome.com.tw/articles/10245264<br><br>
 https://tcsky.cc/tips-01-telegram-chatbot/
 
 
-### FastAPI Vercel設置請參考： https://github.com/hebertcisco/deploy-python-fastapi-in-vercel
+### FastAPI Vercel設置請參考： 
+https://github.com/hebertcisco/deploy-python-fastapi-in-vercel<br><br>
+https://salaivv.com/2023/01/04/telegram-bot-fastapi
