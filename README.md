@@ -1,5 +1,5 @@
 # FastAPI-ChatGPT3.5-TelegramBot-Vercel
-# 一個使用FastAPI框架和GPT3.5 turbo模型官方API，創造一個linebot，快速建置於平台Vercel。
+# 一個使用FastAPI框架和GPT3.5 turbo模型官方API，創造一個TelegramBot，快速建置於平台Vercel。
 
 
 ## [TelegramBot Vercel GPT3.5 turbo/ChatGPT版本部署](https://github.com/pyfbsdk59/Flask-official-ChatGPT-TelegramBot-Vercel)
@@ -60,17 +60,32 @@ https://www.youtube.com/watch?v=eKKEa6NhCd0
   <img src="demo/vercel1.png" width="600"/>
 </div>
 
-#### 2. 必須在Vercel的Environment Variables設定2個環境變數，分別是OPENAI_API_KEY和LINE_CHANNEL_ACCESS_TOKEN和LINE_CHANNEL_SECRECT。順便記下Vercel給的網址，可以自己縮短一些。
+#### 2. 必須在Vercel的Environment Variables設定個環境變數，分別是OPENAI_API_KEY和TELEGRAM_BOT_TOKEN。順便記下Vercel給的網址，可以自己縮短一些。
 
 <div align="center">
   <img src="demo/vercel2.png" width="600"/>
 </div>
 
-#### 3. Deploy之後，在LINE developer設定webhook URL即可，測試OK，就可上路。
+
+#### 3. 打開瀏覽器，輸入以下網址，設定webhook為部屬完Vercel的最後步驟，格式為：https://api.telegram.org/bot{$token}/setWebhook?url={$webhook_url}。
+
+##### 故實際範例就像以下範例（非直接複製使用，請改用自己的telegram token和Vercel專案的URL）：
 
 
+https://api.telegram.org/bot606248605:AAGv_TOJdNNMc_v3toHK_X6M-dev_1tG-JA/setWebhook?url=https://xxx.vercel.app/callback
+
+
+#### 4. 成功後會顯示以下文字：
+
+{
+  ok: true,
+  result: true,
+  description: "Webhook was set"
+}
 ------
-### Line和openai api設置請參考： https://github.com/howarder3/GPT-Linebot-python-flask-on-vercel
+### 創建Telegram機器人和取得token，請參考： 
+https://ithelp.ithome.com.tw/articles/10245264<br><br>
+https://tcsky.cc/tips-01-telegram-chatbot/
 
 
 ### FastAPI Vercel設置請參考： https://github.com/hebertcisco/deploy-python-fastapi-in-vercel
